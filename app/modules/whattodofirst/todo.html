@@ -1,0 +1,81 @@
+<div class="col-md-12 vcenter mt-40 ml-40">
+    <h1 class="inline">Collaborate with your team mates in realtime! Simply copy and send them this link</h1>
+    <img class="inline ml-40" width="150" src="assets/images/arrow.png"/>
+</div>
+<div class="col-md-12 mt-20 ml-20">
+    <button class="custom-gray round k-button padding-7" ng-click="backToHome()">
+        Back to homepage
+    </button>
+</div>
+<div class="col-md-12 mt-40">
+    <div class="col-lg-5 col-sm-12">
+        <div class="demo-section k-content elem-center">
+            <div id="tickets" class="task-form">
+                
+
+                <form id="ticketsForm" class="mt-10 ml-20">
+                	<table ts-wrapper>
+                		<tr class="mb-20">
+                			<td colspan="5" class="no-wrap">
+                				<input type="text" class="k-textbox ml-10 mt-10 col-xl-12" ng-model="project.title" placeholder="Project Title" ng-change="updateProject(project)">
+                				<small class="vcenter mt-10 col-xl-12">This saves your tasks locally <b>not</b> online</small>
+                			</td>
+                		</tr>
+                		<tr>
+                			<td colspan="5">
+                				
+                				<button class="col-md-4 custom-gray round k-button uppercase add-task padding-7 organize-top" ts-criteria="category|lowercase">Organise by category</button>
+                			</td>
+                		</tr>
+                		<tr>
+                			<th class="text-center th-w25" >#</th>
+                			<th ts-criteria="name|lowercase" class="text-center">Task Name</th>
+                			<th ts-criteria="priority|parseInt">Priority (/10)</th>
+                			<th ts-criteria="complexity|parseInt">Complexity (/10)</th>
+                			<th></th>
+                		</tr>
+            			<tr ng-repeat="task in tasks" class="todo-row text-center" ts-repeat>
+            				<td>#{{$index+1}}</td>
+                    		<td>
+                                <textarea id="simple-textarea" class="task-name cat-{{task.category}} k-textbox" rows="5" ng-model="task.name" ng-change="editTask(task)"></textarea>
+                            </td>
+    						<td>
+                                <input class="cat-{{task.category}} k-textbox" type="number" min="0" max="10" ng-model="task.priority" ng-change="editTask(task)"/>
+                            </td>
+    						<td>
+                                <input class="cat-{{task.category}} k-textbox" type="number" min="0" max="10" ng-model="task.complexity" ng-change="editTask(task)"/>
+                            </td>
+    						<td>
+                                <a class="mt-5" ng-click="tasks.$remove(task)"><span class="k-icon k-i-delete"></span></a>
+                            </td>
+                    	</tr>
+                	</table>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-20 mb-20 min-height-40px">
+            <button class="col-md-4 custom-gray round k-button uppercase add-task padding-7" ng-click="addTask()">Add new task</button>
+        </div>
+    </div>
+    <div class="col-lg-7 col-sm-12" ng-if="chartData">
+        <div class="k-content">
+        	<nvd3 options='chart.options' data='chart.data'></nvd3>
+    	</div>
+        <div class="col-md-12 mt-20">
+            <ul class="font-18">
+                <li><span class="cat-1-color">Green:</span> Easy <strong>Win</strong></li>
+                <li><span class="cat-2-color">Blue:</span> <strong>Tough</strong> but must do</li>
+                <li><span class="cat-3-color">Yellow:</span> <strong>Simple</strong> but not that important</li>
+                <li><span class="cat-4-color">Red:</span> Left for <strong>last</strong></li>
+            </ul>
+            <span class="font-30">Start with <span class="cat-1-color">Green Circles</span>, work your way to <span class="cat-2-color">Blue Squares</span>, then to <span class="cat-3-color">Yellow Triangles</span>, and wrap up with the <span class="cat-4-color">Red Crosses</span></span>
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-12 loader" ng-if="loader">
+        <div class="k-content">
+        	<img src="assets/images/default-loader.gif">
+    	</div>
+    </div>
+    
+</div>

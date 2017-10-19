@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>What First?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.02" />
+  
+  <meta name="description" content="What To Do First? We sort your todo list and plot in a chart. To help you decide what to do first.">
+  <meta property="image" content="link_to_image" content="assets/images/logo.png">
+
+  <meta property="og:title" content="What To Do First? To help you decide what to do first.">
+  <meta property="og:image" content="link_to_image" content="assets/images/logo.png">
+  <meta property="og:description" content="What To Do First? We sort your todo list and plot in a chart. To help you decide what to do first.">
+
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/kendo-ui/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  
+    <link href="bower_components/kendo-ui/styles/kendo.common.core.min.css" rel="stylesheet">
+    <link href="bower_components/kendo-ui/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="bower_components/kendo-ui/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="bower_components/kendo-ui/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="bower_components/kendo-ui/styles/kendo.material.min.css" rel="stylesheet">
+    <link href="bower_components/kendo-ui/styles/kendo.default.mobile.min.css" rel="stylesheet">
+    <link href="bower_components/angular-tablesort/tablesort.css" rel="stylesheet">
+    
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <link href="assets/css/aeroviewr.css" rel="stylesheet">
+</head>
+<body>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+
+  <footer class="hide-on-mobile">
+    <div>What First app for AngularAttack <span app-version></span></div>
+  </footer>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="bower_components/d3/d3.min.js"></script>
+  <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+  <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
+  <script src="bower_components/angular-tablesort/js/angular-tablesort.js"></script>
+
+  <script src="app.js"></script>
+  <script src="modules/whattodofirst/main.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

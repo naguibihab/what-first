@@ -1,0 +1,104 @@
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar, .navbar-brand, .navbar-nav>li>a{
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.mt-160{
+	margin-top: 160px;
+}
+
+  #fieldlist {
+    margin: 0;
+    padding: 0;
+}
+
+#fieldlist li {
+    list-style: none;
+    padding-bottom: .7em;
+    text-align: left;
+}
+
+#fieldlist label {
+    display: block;
+    padding-bottom: .3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #444;
+}
+
+#fieldlist li.status {
+    text-align: center;
+}
+
+#fieldlist li .k-widget:not(.k-tooltip),
+#fieldlist li .k-textbox {
+    margin: 0 5px 5px 0;
+}
+
+.confirm {
+    padding-top: 1em;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+#fieldlist li input[type="checkbox"] {
+    margin: 0 5px 0 0;
+}
+
+span.k-widget.k-tooltip-validation {
+    display; inline-block;
+    width: 160px;
+    text-align: left;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    color: red;
+}
+
+.k-tooltip-validation .k-warning {
+    display: none;
+}
+
+.demo-section:not(.wide), #example .box:not(.wide) {
+    max-width: 500px;
+}
+span.k-widget.k-tooltip-validation{
+	width: 180px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.padding-10{
+	padding: 7px 7px 7px 7px;
+}
+
+.font-18{
+	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    
+
+}

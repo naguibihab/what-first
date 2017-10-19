@@ -1,0 +1,23 @@
+
+<div class="col-md-4">
+<div class="demo-section k-content">
+        <div id="tickets">
+            <form id="ticketsForm">
+                <ul id="fieldlist">
+                	<li ng-repeat="task in tasks">
+                		<input type="text" class="k-textbox" ng-model="task.name" ng-change="editTask(task)"/>
+						<input type="number" class="k-textbox" min="-100" max="100" ng-model="task.priority" class="k-textbox" ng-change="editTask(task)"/>
+						<input type="number" class="k-textbox" min="-100" max="100" ng-model="task.complexity" ng-change="editTask(task)"/>
+						<button class="k-button k-primary uppercase padding-10" ng-click="tasks.$remove(task)">Delete</button>
+                	</li>
+					<button ng-click="addTask()">Add new task</button>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="k-content">
+    	<nvd3 options='chart.options' data='chart.data'></nvd3>
+	</div>
+</div>

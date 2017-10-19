@@ -1,0 +1,23 @@
+<div class="col-sm-8 col-sm-offset-2 text-center mt-80 mb-160">
+	<div class="col-sm-12">
+		<img width="200" src="assets/images/logo.png"/>
+	</div>
+	<div class="col-sm-12 mt-20">
+		<h1><strong>What To Do First?</strong></h1>
+	</div>
+	<div class="col-sm-12 mt-20">
+		<img width="400" class="img-responsive instructional-img" src="assets/images/intro.gif"/>
+	</div>
+	<div class="col-sm-12 mt-20">
+		<button class="custom-gray k-button uppercase padding-7 new-project round" CornerRadius="5" ng-click="createnewid()">Start</button>
+		<h2><a href="https://www.youtube.com/watch?v=Ufq5xA_9LGk" target="_blank">Or watch this walk through</a></h2>
+	</div>
+	<hr/>
+	<div ng-if="allProjectIds.length > 0">
+		<h2><u>Previous</u></h2>
+		<br/>
+		<div ng-repeat="project in allProjectIds" class="col-md-6 text-center">
+			<a href="#!/todo/{{project.id}}" class="custom-gray round k-button uppercase prev-task">#{{$index+1}} {{project.title}}</a>
+		</div>
+	</div>
+</div>
