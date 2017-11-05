@@ -3,6 +3,9 @@ An angular 1.x application built for AngularAttack 2017 based on angular-seed
 
 The application is built to help people decide which task to tackle first by measuring its priority against its complexity. To know more [check this video](https://www.youtube.com/watch?v=Ufq5xA_9LGk)
 
+### Demo
+https://angularattack-whattodofirst.firebaseapp.com/#!/main
+
 ## Usage
 - Download and install node.js to use npm
 - Install dependencies by running `install-dependencies.bat`
