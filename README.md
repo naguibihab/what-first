@@ -4,7 +4,7 @@ An angular 1.x application built in 48 hours!! for AngularAttack 2017 based on a
 The application is built to help people decide which task to tackle first by measuring its priority against its complexity. To know more [check this video](https://www.youtube.com/watch?v=Ufq5xA_9LGk)
 
 ### Demo
-https://angularattack-whattodofirst.firebaseapp.com/#!/main
+http://whatfirst.anideaforanapp.com/#!/main
 
 ## Usage
 - Download and install node.js to use npm
